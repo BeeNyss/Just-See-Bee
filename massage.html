@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Head Massage with Hot Stones - Just See Bee | Mobile Healing Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #f8f6f0;
+            --soft-beige: #e8dcc6;
+            --warm-beige: #d4c4a8;
+            --sage-green: #a8b5a0;
+            --soft-green: #c4d1bd;
+            --earth-brown: #8b7355;
+            --text-dark: #4a453f;
+            --text-light: #6b6258;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--earth-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            max-width: 150px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-green);
+        }
+
+        .back-link {
+            background: var(--sage-green);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--earth-brown);
+            transform: translateY(-2px);
+        }
+
+        /* Service Hero */
+        .service-hero {
+            background: linear-gradient(135deg, var(--soft-green), var(--cream));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            color: var(--earth-brown);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Service Content */
+        .service-content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-details h2 {
+            color: var(--earth-brown);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .service-image {
+            background: var(--soft-green);
+            border-radius: 15px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--soft-beige);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: var(--earth-brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card .highlight {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--sage-green);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* What to Expect */
+        .expect-section {
+            background: linear-gradient(135deg, var(--soft-beige), var(--cream));
+            padding: 3rem 0;
+            margin: 3rem 0;
+            border-radius: 20px;
+        }
+
+        .expect-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .expect-section h2 {
+            color: var(--earth-brown);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .expect-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: var(--sage-green);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step h4 {
+            color: var(--earth-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--sage-green);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--sage-green);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .expect-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="your-logo.png" alt="Just See Bee Logo">
+                Just See Bee
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#booking">Book Now</a></li>
+            </ul>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Indian Head Massage with Hot Stones</h1>
+            <p class="subtitle">Ancient Healing Traditions Meet Modern Relaxation</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="service-details">
+                    <h2>About Indian Head Massage</h2>
+                    <p>Indian Head Massage is an ancient therapeutic practice that combines traditional Ayurvedic techniques with the soothing warmth of heated stones to provide deep relaxation and healing.</p>
+                    
+                    <p>This treatment focuses on the head, neck, shoulders, and upper back - areas where we commonly hold tension from daily stress. The addition of smooth, heated stones enhances the therapeutic benefits by improving circulation and allowing muscles to relax more deeply.</p>
+                    
+                    <p>The heated stones, combined with skilled massage techniques, work to release tension, improve scalp circulation, and promote a profound sense of relaxation that extends throughout your entire being.</p>
+                </div>
+                <div class="service-image">
+                    <p>Your Indian Head Massage<br>Service Image<br>Goes Here<br><br>📸 Upload Image</p>
+                </div>
+            </div>
+
+            <!-- Info Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Session Duration</h3>
+                    <span class="highlight">45-60</span>
+                    <p>minutes</p>
+                    <p>Perfect length for deep relaxation without overwhelming</p>
+                </div>
+                <div class="info-card">
+                    <h3>Investment</h3>
+                    <span class="highlight">$100</span>
+                    <p>per session</p>
+                    <p>Includes hot stone treatment and aromatherapy oils</p>
+                </div>
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <span class="highlight">Mobile</span>
+                    <p>service</p>
+                    <p>All equipment provided - you just need to relax</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="expect-section">
+        <div class="container">
+            <div class="expect-content">
+                <h2>What to Expect</h2>
+                <p>Your massage session combines ancient wisdom with modern comfort for ultimate relaxation</p>
+                
+                <div class="expect-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Preparation</h4>
+                        <p>Comfortable seating setup and warming of smooth basalt stones to perfect temperature</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Stone Application</h4>
+                        <p>Heated stones are placed on key pressure points to begin the relaxation process</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Massage Techniques</h4>
+                        <p>Traditional Indian head massage combined with gentle stone movements on head, neck and shoulders</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Integration</h4>
+                        <p>Gentle finishing techniques and time to rest as your body integrates the healing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Deep Relaxation?</h2>
+            <p>Experience the healing power of ancient massage traditions with modern comfort</p>
+            <a href="tel:+61400000000" class="cta-button">Call to Book</a>
+            <a href="mailto:hello@justseebee.com" class="cta-button">Email Enquiry</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Just See Bee. Mobile Healing Services - Sunshine Coast, Queensland</p>
+        </div>
+    </footer>
+</body>
+</html>
