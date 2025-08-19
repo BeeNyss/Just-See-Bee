@@ -731,6 +731,16 @@
             observer.observe(card);
         });
         
+        // Make sure footer social icons are always visible
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialIcons = document.querySelectorAll('.footer-social-link img');
+            socialIcons.forEach(icon => {
+                icon.style.opacity = '1';
+                icon.style.visibility = 'visible';
+                icon.style.display = 'block';
+            });
+        });
+        
     // Prevent auto-scrolling on page load
         if (window.location.hash) {
             // Remove hash from URL without triggering scroll
