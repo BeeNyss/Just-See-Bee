@@ -320,6 +320,37 @@
             object-fit: cover;
             border-radius: 15px;
         }
+
+        .credentials {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border: 1px solid var(--soft-beige);
+        }
+
+        .credentials img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .credentials-text h4 {
+            color: var(--earth-brown);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .credentials-text p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.4;
+        }        
         
         /* Booking Section */
         .booking {
@@ -488,6 +519,17 @@
                 gap: 1rem;
                 align-items: center;
             }
+            .credentials {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+
+            .credentials img {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         /* Smooth scrolling */
@@ -594,6 +636,14 @@
                     <p>I'm a fully qualified Kinesiologist (trained at the College of Kinesiology in Brisbane) and a certified Myofascial Referral/Release Therapist. Using a unique blend of healing modalities, I support your physical, emotional, and energetic well-being with a truly holistic approach.</p>
                     <p>Every session is personalised to meet your individual needs—whether you're seeking pain relief, emotional balance, or deeper body awareness. Many clients experience noticeable pain reduction and increased range of motion in under 15 minutes.</p>         
                     <p>Let's work together to reconnect you with your body's natural ability to heal.</p>
+                <div class="credentials">
+                        <img src="ATMSLogo.png" alt="ATMS Accredited Practitioner 2025-2026" onerror="this.style.display='none';">
+                        <div class="credentials-text">
+                            <h4>Fully Accredited Practitioner</h4>
+                            <p>Australian Traditional-Medicine Society (ATMS)<br>
+                            Accredited 2025-2026</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
                     <img src="Beeportrait.jpg" alt="Bee - Just See Bee Kinesiologist">
