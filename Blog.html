@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Insights - Just See Bee | Healing Services Sunshine Coast</title>
+    <link rel="icon" href="JSBGoogle.png" type="image/png">
+    
+    <!-- SEO TAGS -->
+    <meta name="description" content="Just See Bee blog - Healing insights, wellness findings, and health recommendations from experienced Kinesiologist on the Sunshine Coast.">
+    <meta name="keywords" content="healing blog, kinesiology insights, wellness tips, myofascial release, reiki advice, sound therapy, herbal essences, sunshine coast wellness, just see bee">
+    <meta name="author" content="Just See Bee">
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #f8f6f0;
+            --soft-beige: #e8dcc6;
+            --warm-beige: #d4c4a8;
+            --sage-green: #a8b5a0;
+            --soft-green: #c4d1bd;
+            --earth-brown: #8b7355;
+            --text-dark: #4a453f;
+            --text-light: #6b6258;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {            
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--earth-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: 80px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-green);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--earth-brown);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(168, 181, 160, 0.1), rgba(196, 209, 189, 0.1)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f6f0" width="1200" height="600"/><circle fill="%23c4d1bd" opacity="0.3" cx="200" cy="150" r="80"/><circle fill="%23a8b5a0" opacity="0.2" cx="800" cy="300" r="120"/><circle fill="%23e8dcc6" opacity="0.4" cx="1000" cy="100" r="60"/></svg>');
+            padding: 4rem 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--earth-brown);
+            font-weight: normal;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Filter Navigation */
+        .filter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            border: 2px solid var(--sage-green);
+            border-radius: 30px;
+            background: white;
+            color: var(--earth-brown);
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Georgia', serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(45deg, var(--sage-green), var(--soft-green));
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(168, 181, 160, 0.3);
+        }
+
+        /* Content Grid */
+        .content-section {
+            padding: 2rem 0;
+            background-color: var(--cream);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--soft-beige);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sage-green), var(--soft-green));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .content-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .category-blog {
+            background: var(--sage-green);
+            color: white;
+        }
+
+        .category-finding {
+            background: var(--earth-brown);
+            color: white;
+        }
+
+        .category-recommendation {
+            background: var(--soft-green);
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--earth-brown);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .card-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--soft-beige);
+        }
+
+        .read-more {
+            display: inline-block;
+            background: var(--sage-green);
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: var(--earth-brown);
+            transform: translateY(-2px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-light);
+            display: none;
+            background: white;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--earth-brown);
+        }
+
+        /* Add Content Button */
+        .add-content-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--earth-brown), var(--sage-green));
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-content-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(139, 115, 85, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p {
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 1rem;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-nav {
+                gap: 0.5rem;
+                margin: 2rem 0;
+            }
+
+            .filter-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="JSBlogosml.png" alt="Just See Bee Logo">
+                Just See Bee
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#booking">Book Now</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Healing Insights & Wellness</h1>
+            <p class="subtitle">Sharing knowledge, discoveries & recommendations for your healing journey</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <div class="container">
+        <nav class="filter-nav">
+            <button class="filter-btn active" data-filter="all">All Content</button>
+            <button class="filter-btn" data-filter="blog">Healing Blogs</button>
+            <button class="filter-btn" data-filter="finding">Research Findings</button>
+            <button class="filter-btn" data-filter="recommendation">Wellness Recommendations</button>
+        </nav>
+    </div>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid" id="contentGrid">
+                <!-- Sample Blog Post -->
+                <article class="content-card" data-category="blog">
+                    <span class="card-category category-blog">Healing Blog</span>
+                    <h2 class="card-title">Understanding Your Body's Natural Healing Wisdom</h2>
+                    <div class="card-meta">
+                        <span>March 15, 2024</span>
+                        <span>5 min read</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Your body holds incredible wisdom for healing itself. Through kinesiology and energy work, we can tap into this innate intelligence to restore balance and promote natural healing from within.
+                    </p>
+                    <a href="#" class="read-more">View PubMed Study</a>
+                </article>
+
+                <!-- Sample Finding -->
+                <article class="content-card" data-category="finding">
+                    <span class="card-category category-finding">Research Finding</span>
+                    <h2 class="card-title">Myofascial Release: 85% Pain Reduction in Clinical Trials</h2>
+                    <div class="card-meta">
+                        <span>March 12, 2024</span>
+                        <span>Research Study</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Recent studies show that targeted myofascial release techniques can reduce chronic pain by up to 85% within three sessions. Here's what the research reveals about this powerful healing modality.
+                    </p>
+                    <a href="#" class="read-more">View Clinical Study</a>
+                </article>
+
+                <!-- Sample Recommendation -->
+                <article class="content-card" data-category="recommendation">
+                    <span class="card-category category-recommendation">Wellness Recommendation</span>
+                    <h2 class="card-title">Australian Bush, Bach & Desert Flower Essences for Healing</h2>
+                    <div class="card-meta">
+                        <span>March 10, 2024</span>
+                        <span>Flower Essences</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Discover the profound healing power of Australian Bush Flower Essences, traditional Bach Flower Remedies, and Australian Desert Flower Essences. These vibrational medicines support emotional balance, spiritual growth, and energetic healing.
+                    </p>
+                    <div style="background: var(--soft-beige); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h4 style="color: var(--earth-brown); margin-bottom: 1rem; font-size: 1.1rem;">Featured Essence Categories:</h4>
+                        <ul style="color: var(--text-dark); line-height: 1.8; padding-left: 1.5rem;">
+                            <li><strong>Australian Bush Flower Essences:</strong> Native Australian flowers for clearing limiting beliefs and enhancing intuition</li>
+                            <li><strong>Bach Flower Remedies:</strong> Dr. Edward Bach's original 38 flower remedies for emotional healing</li>
+                            <li><strong>Australian Desert Flower Essences:</strong> Powerful desert blooms for deep transformation and spiritual awakening</li>
+                            <li><strong>Living Essences:</strong> Wild flower essences from pristine Australian landscapes</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="read-more">Explore Flower Essences</a>
+                </article>
+
+                <!-- Sample Blog Post -->
+                <article class="content-card" data-category="blog">
+                    <span class="card-category category-blog">Healing Blog</span>
+                    <h2 class="card-title">The Science Behind Vibrational Sound Therapy</h2>
+                    <div class="card-meta">
+                        <span>March 8, 2024</span>
+                        <span>7 min read</span>
+                    </div>
+                    <p class="card-excerpt">
+                        How sound frequencies affect our cellular structure and promote healing. Explore the fascinating science behind why sound therapy works so effectively for stress relief and pain management.
+                    </p>
+                    <a href="#" class="read-more">Read More</a>
+                </article>
+
+                <!-- Sample Finding -->
+                <article class="content-card" data-category="finding">
+                    <span class="card-category category-finding">Research Finding</span>
+                    <h2 class="card-title">Kinesiology: Benefits, Validity & Clinical Effectiveness</h2>
+                    <div class="card-meta">
+                        <span>March 5, 2024</span>
+                        <span>Clinical Study</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Comprehensive analysis of kinesiology's therapeutic benefits, scientific validity, and clinical effectiveness in treating various health conditions. Research demonstrates significant improvements in musculoskeletal function and overall wellness.
+                    </p>
+                    <div style="background: var(--soft-beige); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h4 style="color: var(--earth-brown); margin-bottom: 1rem; font-size: 1.1rem;">Featured Research Articles:</h4>
+                        <ul style="color: var(--text-dark); line-height: 1.8; padding-left: 1.5rem;">
+                            <li><strong>Clinical Effectiveness Study:</strong> Evidence-based analysis of kinesiology's therapeutic benefits and validity</li>
+                            <li><strong>Muscle Testing Research:</strong> The fascinating science behind muscle testing and body function assessment</li>
+                            <li><strong>Treatment Outcomes:</strong> Documented improvements in musculoskeletal conditions</li>
+                            <li><strong>Professional Standards:</strong> Scientific approach to applied kinesiology practices</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <a href="#" class="read-more" data-link="effectiveness">View Effectiveness Study</a>
+                        <a href="#" class="read-more" data-link="muscle-testing" style="background: var(--earth-brown);">Muscle Testing Research</a>
+                    </div>
+                </article>
+
+                <!-- Grounding/Earthing Finding -->
+                <article class="content-card" data-category="finding">
+                    <span class="card-category category-finding">Research Finding</span>
+                    <h2 class="card-title">Grounding (Earthing): Clinical Evidence for Natural Healing</h2>
+                    <div class="card-meta">
+                        <span>February 28, 2024</span>
+                        <span>Clinical Research</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Multiple peer-reviewed studies demonstrate that direct skin contact with Earth's surface electrons reduces inflammation, improves sleep, normalizes cortisol rhythms, and accelerates wound healing. The science behind this ancient practice is remarkable.
+                    </p>
+                    <div style="margin: 1.5rem 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/44ddtR0XDVU?si=92jXFI61TF3yKmNs" title="The Science of Grounding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 10px;"></iframe>
+                    </div>
+                    <div style="background: var(--soft-beige); padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                        <h4 style="color: var(--earth-brown); margin-bottom: 1rem; font-size: 1.1rem;">Key Research Findings:</h4>
+                        <ul style="color: var(--text-dark); line-height: 1.8; padding-left: 1.5rem;">
+                            <li><strong>Inflammation Reduction:</strong> 74% decrease in white blood cell count after grounding sessions</li>
+                            <li><strong>Sleep Quality:</strong> 85% of participants reported improved sleep within one week</li>
+                            <li><strong>Pain Management:</strong> Significant reduction in chronic pain and muscle stiffness</li>
+                            <li><strong>Stress Response:</strong> Normalized cortisol levels and improved HRV (Heart Rate Variability)</li>
+                            <li><strong>Wound Healing:</strong> 40% faster healing rates in grounded vs. non-grounded subjects</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="read-more">Read Full Research</a>
+                </article>
+
+                <!-- Sample Recommendation -->
+                <article class="content-card" data-category="recommendation">
+                    <span class="card-category category-recommendation">Wellness Recommendation</span>
+                    <h2 class="card-title">Creating Your Sacred Healing Space at Home</h2>
+                    <div class="card-meta">
+                        <span>March 1, 2024</span>
+                        <span>Home Wellness</span>
+                    </div>
+                    <p class="card-excerpt">
+                        Transform any corner of your home into a healing sanctuary. Simple tips for creating a space that supports your wellness practices and promotes deep relaxation and restoration.
+                    </p>
+                    <a href="#" class="read-more">Get Started</a>
+                </article>
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <h3>No content found</h3>
+                <p>Try selecting a different category or check back later for new healing insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="add-content-btn" title="Add new content">+</button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Just See Bee</h3>
+                    <p>Healing services bring wellness and restoration to your body and soul through natural therapeutic modalities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Kinesiology • Myofascial Release • Hot & Cold Crystal Treatments • Reiki • Vibrational Sound Therapy • Herbal Essences</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Sunshine Coast, Queensland<br>
+                    Mobile: 0422809293<br>
+                    Email: justseebee@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Just See Bee. All rights reserved. | Healing Services - Sunshine Coast, Queensland</p>
+                <div style="display: flex; gap: 2rem; align-items: center;">
+                    <a href="privacy-policy.html" style="color: white; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease;" onmouseover="this.style.color='#e8dcc6'" onmouseout="this.style.color='white'">Privacy Policy</a>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/justseebeekinesiology" target="_blank" class="footer-social-link">
+                            FB
+                        </a>
+                        <a href="https://www.instagram.com/justseebeekinesiology/" target="_blank" class="footer-social-link">
+                            IG
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const contentCards = document.querySelectorAll('.content-card');
+        const emptyState = document.getElementById('emptyState');
+        const contentGrid = document.getElementById('contentGrid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                let visibleCount = 0;
+
+                contentCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        // Add entrance animation
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, visibleCount * 100);
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show empty state if no cards are visible
+                if (visibleCount === 0) {
+                    emptyState.style.display = 'block';
+                    contentGrid.style.display = 'none';
+                } else {
+                    emptyState.style.display = 'none';
+                    contentGrid.style.display = 'grid';
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Add content button functionality
+        document.querySelector('.add-content-btn').addEventListener('click', () => {
+            alert('Ready to add new healing content! This would connect to your content management system.');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Read more functionality with real research links
+        const researchLinks = {
+            'Understanding Your Body\'s Natural Healing Wisdom': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6396703/',
+            'Myofascial Release: 85% Pain Reduction in Clinical Trials': 'https://pubmed.ncbi.nlm.nih.gov/32476470/',
+            'Australian Bush, Bach & Desert Flower Essences for Healing': 'https://www.australianbushfloweressences.com/research',
+            'The Science Behind Vibrational Sound Therapy': 'https://pubmed.ncbi.nlm.nih.gov/27055677/',
+            'Kinesiology: Benefits, Validity & Clinical Effectiveness': 'https://naturalmedicineweek.com.au/kinesiology-its-benefits-validity-and-effectiveness/',
+            'Creating Your Sacred Healing Space at Home': '#wellness-space-guide',
+            'Grounding (Earthing): Clinical Evidence for Natural Healing': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3265077/'
+        };
+
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = link.closest('.content-card').querySelector('.card-title').textContent;
+                const linkType = link.getAttribute('data-link');
+                
+                // Handle kinesiology multiple links
+                if (title === 'Kinesiology: Benefits, Validity & Clinical Effectiveness') {
+                    if (linkType === 'effectiveness') {
+                        window.open('https://naturalmedicineweek.com.au/kinesiology-its-benefits-validity-and-effectiveness/', '_blank');
+                    } else if (linkType === 'muscle-testing') {
+                        window.open('https://naturalmedicineweek.com.au/kinesiology-the-fascinating-study-of-muscle-testing-and-body-function/', '_blank');
+                    }
+                    return;
+                }
+                
+                // Handle regular single links
+                const researchUrl = researchLinks[title];
+                
+                if (researchUrl && researchUrl.startsWith('http')) {
+                    // Open external research links in new tab
+                    window.open(researchUrl, '_blank');
+                } else if (researchUrl) {
+                    // Handle internal links (if any)
+                    console.log('Navigate to internal:', researchUrl);
+                } else {
+                    // Fallback for unmapped articles
+                    alert('Research documentation coming soon. Please check back later.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
