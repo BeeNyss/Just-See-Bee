@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrational Sound Therapy - Just See Bee | Healing Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #f8f6f0;
+            --soft-beige: #e8dcc6;
+            --warm-beige: #d4c4a8;
+            --sage-green: #a8b5a0;
+            --soft-green: #c4d1bd;
+            --earth-brown: #8b7355;
+            --text-dark: #4a453f;
+            --text-light: #6b6258;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--cream);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+         .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--earth-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+         .logo img {
+            height: 160px;
+            width: 160px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-green);
+        }
+
+        .back-link {
+            background: var(--sage-green);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--earth-brown);
+            transform: translateY(-2px);
+        }
+
+        /* Service Hero */
+        .service-hero {
+            background: linear-gradient(135deg, var(--soft-green), var(--cream));
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            font-size: 3rem;
+            color: var(--earth-brown);
+            margin-bottom: 1rem;
+        }
+
+        .service-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Service Content */
+        .service-content {
+            padding: 4rem 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-details h2 {
+            color: var(--earth-brown);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+         .service-image {
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--soft-beige);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: var(--earth-brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card .highlight {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--sage-green);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* What to Expect */
+        .expect-section {
+            background: linear-gradient(135deg, var(--soft-beige), var(--cream));
+            padding: 3rem 0;
+            margin: 3rem 0;
+            border-radius: 20px;
+        }
+
+        .expect-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .expect-section h2 {
+            color: var(--earth-brown);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .expect-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: var(--sage-green);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step h4 {
+            color: var(--earth-brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--sage-green);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--sage-green);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .expect-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="JSBlogosml.png" alt="Logo">
+                Just See Bee
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#booking">Book Now</a></li>
+            </ul>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>Vibrational Sound Therapy</h1>
+            <p class="subtitle">Healing Through Sacred Sound Frequencies</p>
+        </div>
+    </section>
+
+    <!-- Service Content -->
+    <section class="service-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="service-details">
+                    <h2>About Sound Therapy</h2>
+                    <p>Vibrational Sound Therapy uses the power of sound frequencies and vibrations to promote physical, emotional, and spiritual healing. This ancient practice works with your body's natural resonance to restore balance and harmony.</p>
+                    
+                    <p>Using instruments like singing crystal pyramids, chimes, meditation music and other therapeutic sound tools, I create a symphony of healing frequencies that penetrate deep into your cells, promoting relaxation and encouraging your body's natural healing processes.</p>
+                    
+                    <p>Sound therapy can help reduce stress, lower blood pressure, improve sleep, release emotional blockages, and create a profound sense of peace and well-being. Each session is a unique journey of sound and silence.</p>
+                </div>
+                <div class="service-image">
+                    <img src="Soundpic.png" alt="Vibrational Sound">
+                </div>
+
+            </div>
+
+            <!-- Info Cards -->
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Session Duration</h3>
+                    <span class="highlight">30-45</span>
+                    <p>minutes</p>
+                    <p>Includes sound healing and integration time</p>
+                </div>
+                <div class="info-card">
+                    <h3>Investment</h3>
+                    <span class="highlight">$80</span>
+                    <p>per session</p>
+                    <p>Full sound bath with multiple healing instruments</p>
+                </div>
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <span class="highlight">Mobile & Clinic</span>
+                    <p>Mobile service to Sunshine Coast or visit me at the Mooloolaba Wellness Collective</p>
+                    <p>Complete sound healing setup brought to you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="expect-section">
+        <div class="container">
+            <div class="expect-content">
+                <h2>What to Expect</h2>
+                <p>Your session is a meditative journey through healing frequencies and vibrations</p>
+                
+                <div class="expect-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Comfort Setup</h4>
+                        <p>Comfortable positioning with pillows and blankets for complete relaxation</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Sound Journey</h4>
+                        <p>Gentle introduction of healing frequencies using various sound instruments</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Deep Immersion</h4>
+                        <p>Full sound bath experience with layered frequencies for deep healing</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Gentle Return</h4>
+                        <p>Gradual return to awareness with grounding and integration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Experience Vibrational Sound Healing?</h2>
+            <p>Book your vibrational sound therapy session and let healing frequencies restore your harmony</p>
+            <a href="tel:+61422809293" class="cta-button">Call to Book</a>
+            <a href="mailto:justseebee@gmail.com" class="cta-button">Email Enquiry</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Just See Bee. Healing Services - Sunshine Coast, Queensland</p>
+        </div>
+    </footer>
+</body>
+</html>
