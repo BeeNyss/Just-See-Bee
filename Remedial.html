@@ -3,201 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Remedial Massage - Coming Soon | Just See Bee</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #f8f6f0;
-            --soft-beige: #e8dcc6;
-            --warm-beige: #d4c4a8;
-            --sage-green: #a8b5a0;
-            --soft-green: #c4d1bd;
-            --earth-brown: #8b7355;
-            --text-dark: #4a453f;
-            --text-light: #6b6258;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--cream);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--earth-brown);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 160px;
-            width: 160px;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .back-link {
-            background: var(--sage-green);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: var(--earth-brown);
-            transform: translateY(-2px);
-        }
-
-        /* Coming Soon Section */
-        .coming-soon {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .coming-soon-content {
-            max-width: 600px;
-        }
-
-        .coming-soon h1 {
-            font-size: 3rem;
-            color: var(--earth-brown);
-            margin-bottom: 1rem;
-        }
-
-        .coming-soon .badge {
-            display: inline-block;
-            background: var(--sage-green);
-            color: white;
-            padding: 10px 30px;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .coming-soon p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .coming-soon .subtitle {
-            font-size: 1.3rem;
-            color: var(--sage-green);
-            font-style: italic;
-            margin-bottom: 2rem;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border: 1px solid var(--soft-beige);
-            margin-top: 2rem;
-        }
-
-        .contact-info h3 {
-            color: var(--earth-brown);
-            margin-bottom: 1rem;
-        }
-
-        .contact-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: var(--sage-green);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .contact-button:hover {
-            background: var(--earth-brown);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .coming-soon h1 {
-                font-size: 2.2rem;
-            }
-            
-            .logo img {
-                height: 120px;
-                width: 120px;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
-            }
-
-            .contact-button {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -207,25 +14,31 @@
                 <img src="JSBlogosml.png" alt="Logo">
                 Just See Bee
             </a>
-            <a href="index.html" class="back-link">← Back to Home</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="https://myappointments.app/portal/public/get-embeded-code?business_id=Mjg1MA==" target="_blank" class="nav-book-btn">Book Now</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
         </nav>
     </header>
 
     <!-- Coming Soon Section -->
-    <section class="coming-soon">
+    <section style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 6rem 0; text-align: center;">
         <div class="container">
-            <div class="coming-soon-content">
-                <h1>Remedial Massage</h1>
-                <div class="badge">Coming Soon</div>
-                <p class="subtitle">Therapeutic Healing Through Expert Touch</p>
-                <p>I'm currently studying Remedial massage, and it will be available later this year.</p>
-                
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h1 style="font-size: 3rem; color: var(--earth-brown); margin-bottom: 1rem;">Remedial Massage</h1>
+                <div style="display: inline-block; background: var(--sage-green); color: white; padding: 10px 30px; border-radius: 30px; font-size: 1.2rem; font-weight: bold; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px;">Coming Soon</div>
+                <p style="font-size: 1.3rem; color: var(--sage-green); font-style: italic; margin-bottom: 1.5rem;">Therapeutic Healing Through Expert Touch</p>
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; line-height: 1.8;">I'm currently studying Remedial massage, and it will be available later this year.</p>
+
                 <div class="contact-info">
                     <h3>Interested in Remedial Massage?</h3>
                     <p>Get in touch to learn more or to be notified when this service becomes available</p>
-                    <div class="contact-buttons">
-                        <a href="mailto:justseebee@gmail.com" class="contact-button">Email Enquiry</a>
-                        <a href="index.html" class="contact-button">View Other Services</a>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <a href="mailto:justseebee@gmail.com" class="cta-button">Email Enquiry</a>
+                        <a href="index.html" class="cta-button">View Other Services</a>
                     </div>
                 </div>
             </div>
@@ -238,5 +51,17 @@
             <p>&copy; 2026 Just See Bee. Healing Services - Sunshine Coast, Queensland</p>
         </div>
     </footer>
+
+    <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+        });
+    }
+    </script>
 </body>
 </html>
