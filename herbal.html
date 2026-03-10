@@ -3,336 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Herbal Essences - Just See Bee | Healing Services</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #f8f6f0;
-            --soft-beige: #e8dcc6;
-            --warm-beige: #d4c4a8;
-            --sage-green: #a8b5a0;
-            --soft-green: #c4d1bd;
-            --earth-brown: #8b7355;
-            --text-dark: #4a453f;
-            --text-light: #6b6258;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--cream);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--earth-brown);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 160px;
-            width: 160px;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-green);
-        }
-
-        .back-link {
-            background: var(--sage-green);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: var(--earth-brown);
-            transform: translateY(-2px);
-        }
-
-        /* Service Hero */
-        .service-hero {
-            background: linear-gradient(135deg, var(--soft-green), var(--cream));
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .service-hero h1 {
-            font-size: 3rem;
-            color: var(--earth-brown);
-            margin-bottom: 1rem;
-        }
-
-        .service-hero .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
-
-        /* Service Content */
-        .service-content {
-            padding: 4rem 0;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .service-details h2 {
-            color: var(--earth-brown);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-details p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .service-image {
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 15px;
-        }
-
-        /* Info Cards */
-        .info-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .info-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border: 1px solid var(--soft-beige);
-            text-align: center;
-        }
-
-        .info-card h3 {
-            color: var(--earth-brown);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .info-card .highlight {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--sage-green);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* What to Expect */
-        .expect-section {
-            background: linear-gradient(135deg, var(--soft-beige), var(--cream));
-            padding: 3rem 0;
-            margin: 3rem 0;
-            border-radius: 20px;
-        }
-
-        .expect-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .expect-section h2 {
-            color: var(--earth-brown);
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .expect-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .step {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            background: var(--sage-green);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-weight: bold;
-        }
-
-        .step h4 {
-            color: var(--earth-brown);
-            margin-bottom: 0.5rem;
-        }
-
-        .step p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: var(--sage-green);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-            border-radius: 15px;
-            margin: 3rem 0;
-        }
-
-        .cta-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: var(--sage-green);
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin: 0 10px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .expect-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-    <nav class="container">
-        <a href="index.html" class="logo">
-            <img src="JSBlogosml.png" alt="Logo">
-            Just See Bee
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="https://myappointments.app/portal/public/get-embeded-code?business_id=Mjg1MA==" 
-                   target="_blank" 
-                   class="nav-book-btn">Book Now</a></li>
-    </nav>
-</header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="JSBlogosml.png" alt="Logo">
+                Just See Bee
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="https://myappointments.app/portal/public/get-embeded-code?business_id=Mjg1MA==" target="_blank" class="nav-book-btn">Book Now</a></li>
+            </ul>
+            <button class="mobile-menu">☰</button>
+        </nav>
+    </header>
 
     <!-- Service Hero -->
     <section class="service-hero">
@@ -349,9 +39,7 @@
                 <div class="service-details">
                     <h2>About Herbal Essences</h2>
                     <p>Herbal Essences combine the ancient wisdom of plant medicine. I use Bach, Bush and Australian Desert essences to support your healing journey. These natural plant-based remedies work with your body's innate healing abilities.</p>
-                    
                     <p>Using carefully selected herbal tinctures, I create personalised herbal remedies to support your specific health and wellness goals. Each essence is chosen by your body through Kinesiology for its therapeutic properties and energetic qualities.</p>
-                    
                     <p>Whether you're seeking emotional balance, physical healing, spiritual clarity, or you simply want to enhance your overall wellbeing, herbal essences provide gentle yet powerful support from nature's pharmacy.</p>
                 </div>
                 <div class="service-image">
@@ -359,7 +47,6 @@
                 </div>
             </div>
 
-            <!-- Info Cards -->
             <div class="info-cards">
                 <div class="info-card">
                     <h3>Consultation Duration</h3>
@@ -389,7 +76,6 @@
             <div class="expect-content">
                 <h2>What to Expect</h2>
                 <p>Your herbal consultation is a personalised journey into natural healing and wellness support</p>
-                
                 <div class="expect-steps">
                     <div class="step">
                         <div class="step-number">1</div>
@@ -421,8 +107,8 @@
         <div class="container">
             <h2>Ready to Harness Nature's Healing Power?</h2>
             <p>Book your herbal essences consultation and discover your personalised plant medicine</p>
-            <a href="tel:+61400000000" class="cta-button">Call to Book</a>
-            <a href="mailto:hello@justseebee.com" class="cta-button">Email Enquiry</a>
+            <a href="tel:+61422809293" class="cta-button">Call to Book</a>
+            <a href="mailto:justseebee@gmail.com" class="cta-button">Email Enquiry</a>
         </div>
     </section>
 
@@ -432,5 +118,17 @@
             <p>&copy; 2026 Just See Bee. Healing Services - Sunshine Coast, Queensland</p>
         </div>
     </footer>
+
+    <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+        });
+    }
+    </script>
 </body>
 </html>
