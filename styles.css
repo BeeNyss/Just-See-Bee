@@ -17,6 +17,8 @@
 
 html {
     scroll-behavior: smooth;
+    overscroll-behavior: none;
+    height: 100%;
 }
 
 body {
@@ -25,6 +27,7 @@ body {
     color: var(--text-dark);
     background-color: var(--cream);
     overscroll-behavior: none;
+    min-height: 100%;
 }
 
 .container {
