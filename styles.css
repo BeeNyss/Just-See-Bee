@@ -42,12 +42,6 @@ header {
     z-index: 100;
 }
 
-@media (max-width: 768px) {
-    header {
-        position: relative;
-    }
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -65,129 +59,50 @@ nav {
 }
 
 .logo img {
-    height: 100px;   /* desktop size — adjust this number to your taste */
-    width: 100px;
+    height: 160px;
+    width: 160px;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
 }
 
-@media (max-width: 768px) {
-    header {
-        position: relative;
-    }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-    .logo img {
-        height: 60px;
-        width: 60px;
-    }
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-    .logo {
-        font-size: 1.2rem;
-    }
+.nav-links a:hover {
+    color: var(--sage-green);
+}
 
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, #e8dcc6, #c4d1bd);
-        flex-direction: column;
-        padding: 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-    
-    .nav-links a {
-        color: var(--text-dark) !important;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-    
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        padding: 0.75rem 1rem;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--earth-brown);
+    cursor: pointer;
+}
 
-    .mobile-menu {
-        display: block;
-    }
+.back-link {
+    background: var(--sage-green);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
 
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero .subtitle {
-        font-size: 1rem;
-    }
-
-    .service-hero h1 {
-        font-size: 2rem;
-    }
-
-    .about-content,
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image {
-        height: auto;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .expect-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .booking-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .cta-section {
-        padding: 2rem 1rem;
-    }
-
-    .cta-section .cta-button {
-        display: block;
-        margin: 0.5rem auto;
-        max-width: 220px;
-    }
-
-    .credentials {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-        padding: 1rem;
-    }
-
-    .credentials img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .footer-bottom > div {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-    }
+.back-link:hover {
+    background: var(--earth-brown);
+    transform: translateY(-2px);
 }
 
 /* ── Hero (index) ── */
@@ -698,11 +613,27 @@ footer {
 }
 
 /* ══════════════════════════════════════
-   MOBILE RESPONSIVE — applies to ALL pages
+   MOBILE — single clean block
    ══════════════════════════════════════ */
 @media (max-width: 768px) {
 
-    /* Nav */
+    header {
+        position: relative;
+    }
+
+    .logo img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -711,9 +642,9 @@ footer {
         right: 0;
         background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 0;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        z-index: 99;
+        z-index: 999;
         gap: 0;
     }
 
@@ -724,11 +655,12 @@ footer {
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .mobile-menu {
-        display: block;
+    .nav-links a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
     }
 
-    /* Hero */
     .hero h1 {
         font-size: 2rem;
     }
@@ -737,12 +669,10 @@ footer {
         font-size: 1rem;
     }
 
-    /* Service hero */
     .service-hero h1 {
         font-size: 2rem;
     }
 
-    /* Layouts */
     .about-content,
     .content-grid {
         grid-template-columns: 1fr;
@@ -764,7 +694,6 @@ footer {
         font-size: 2rem;
     }
 
-    /* Booking */
     .booking-buttons {
         display: flex;
         flex-direction: column;
@@ -772,7 +701,6 @@ footer {
         align-items: center;
     }
 
-    /* CTA buttons wrap on small screens */
     .cta-section {
         padding: 2rem 1rem;
     }
@@ -783,7 +711,6 @@ footer {
         max-width: 220px;
     }
 
-    /* Credentials */
     .credentials {
         flex-direction: column;
         text-align: center;
@@ -796,7 +723,6 @@ footer {
         height: 60px;
     }
 
-    /* Footer */
     .footer-bottom {
         flex-direction: column;
         text-align: center;
