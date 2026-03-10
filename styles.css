@@ -71,51 +71,116 @@ nav {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
     .logo img {
-        height: 60px;   /* mobile size — fits without crowding */
+        height: 60px;
         width: 60px;
     }
-}
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    .logo {
+        font-size: 1.2rem;
+    }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #e8dcc6, #c4d1bd);
+        flex-direction: column;
+        padding: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
 
-.nav-links a:hover {
-    color: var(--sage-green);
-}
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
 
-.mobile-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--earth-brown);
-    cursor: pointer;
-}
+    .mobile-menu {
+        display: block;
+    }
 
-.back-link {
-    background: var(--sage-green);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-.back-link:hover {
-    background: var(--earth-brown);
-    transform: translateY(-2px);
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    .service-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-content,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: auto;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expect-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .booking-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+
+    .cta-section .cta-button {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 220px;
+    }
+
+    .credentials {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .credentials img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-bottom > div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
 }
 
 /* ── Hero (index) ── */
