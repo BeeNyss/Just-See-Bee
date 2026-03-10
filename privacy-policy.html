@@ -3,116 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Privacy Policy - Just See Bee | Healing Services | Sunshine Coast</title>
     <link rel="icon" href="JSBGoogle.png" type="image/png">
-    
-    <!-- SEO TAGS -->
-    <meta name="description" content="Privacy Policy for Just See Bee - Healing services on the Sunshine Coast. Learn how I protect your personal information and health records.">
-    <meta name="keywords" content="privacy policy, just see bee, kinesiology, healing services, sunshine coast, personal information, health records">
+    <meta name="description" content="Privacy Policy for Just See Bee - Healing services on the Sunshine Coast.">
     <meta name="author" content="Just See Bee">
     <meta name="robots" content="index, follow">
-    
-    <!-- OPEN GRAPH META TAGS FOR SOCIAL SHARING -->
-    <meta property="og:title" content="Privacy Policy - Just See Bee | Healing Services">
-    <meta property="og:description" content="Privacy Policy for Just See Bee - Healing services on the Sunshine Coast">
-    <meta property="og:image" content="https://BeeNyss.github.io/Just-See-Bee/JSBlogosml.png">
-    <meta property="og:url" content="https://BeeNyss.github.io/Just-See-Bee/privacy-policy.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Just See Bee">
-      
+
+    <!-- Extra styles only needed for this page -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --cream: #f8f6f0;
-            --soft-beige: #e8dcc6;
-            --warm-beige: #d4c4a8;
-            --sage-green: #a8b5a0;
-            --soft-green: #c4d1bd;
-            --earth-brown: #8b7355;
-            --text-dark: #4a453f;
-            --text-light: #6b6258;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--cream);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, var(--soft-beige), var(--soft-green));
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-         .logo {            
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--earth-brown);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-         .logo img {
-            height: 160px;
-            width: 160px;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-green);
-        }
-
-        .mobile-menu {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--earth-brown);
-            cursor: pointer;
-        }
-
-        /* Main Content */
         .main-content {
             padding: 4rem 0;
-            background-color: var(--cream);
         }
 
         .privacy-container {
@@ -195,7 +96,7 @@
         }
 
         .back-button {
-            display: inline-block;
+            display: block;
             background: linear-gradient(45deg, var(--sage-green), var(--soft-green));
             color: white;
             padding: 12px 25px;
@@ -204,9 +105,7 @@
             font-size: 1rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(168, 181, 160, 0.3);
             margin: 2rem auto;
-            display: block;
             text-align: center;
             max-width: 200px;
         }
@@ -216,106 +115,9 @@
             box-shadow: 0 6px 20px rgba(168, 181, 160, 0.4);
         }
 
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--earth-brown), var(--sage-green));
-            color: white;
-            padding: 3rem 0 1rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-section p {
-            line-height: 1.8;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.2);
-            padding-top: 1rem;
-            margin-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--soft-beige);
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .footer-social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.2) !important;
-            border-radius: 50%;
-            text-decoration: none;
-            color: white;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            overflow: visible !important;
-        }
-        
-        .footer-social-link img {
-            width: 24px !important;
-            height: 24px !important;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-
-        .footer-social-link:hover {
-            background: rgba(255, 255, 255, 0.3) !important;
-            transform: translateY(-2px);
-        }
-        
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-
             .privacy-container {
-                padding: 2rem;
-                margin: 0 1rem;
+                padding: 1.5rem;
             }
 
             .page-title {
@@ -325,29 +127,7 @@
             .privacy-section h2 {
                 font-size: 1.5rem;
             }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .footer-links {
-                order: 1;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .footer-social {
-                order: 2;
-            }
         }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
     </style>
 </head>
 <body>
@@ -390,7 +170,6 @@
                         <li>Payment and billing information</li>
                         <li>Appointment scheduling information</li>
                     </ul>
-                    
                     <h3>Health Information</h3>
                     <ul>
                         <li>Medical history and current health conditions</li>
@@ -477,7 +256,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -488,25 +267,24 @@
                 </div>
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <p>Kinesiology • Myofascial Release • Hot & Cold Crystal Treatments • Massage • Reiki • Herbal Essences</p>
+                    <p>Kinesiology • Myofascial Referral • Hot & Cold Crystal Treatments • Reiki • Herbal Essences</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Sunshine Coast, Queensland<br>
-                    Mobile: 0422809293 <br>
-                    Email: justseebee@gmail.com </p>
+                    <p>Mobile: 0422809293<br>Email: justseebee@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Just See Bee. All rights reserved. | Healing Services - Sunshine Coast, Queensland</p>
-                <div class="footer-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <div class="footer-social">
+                <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; justify-content: center;">
+                    <a href="privacy-policy.html" style="color: white; text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="terms-and-conditions.html" style="color: white; text-decoration: none; font-size: 0.9rem;">Terms &amp; Conditions</a>
+                    <div style="display: flex; gap: 1rem;">
                         <a href="https://www.facebook.com/justseebeekinesiology" target="_blank" style="display: inline-block; text-decoration: none;">
-                            <img src="FBLogo.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onerror="this.outerHTML='<span style=\'color: white; font-size: 14px;\'>FB</span>';">
+                            <img src="FBLogo.png" alt="Facebook" style="width: 40px; height: 40px; border-radius: 50%;" onerror="this.outerHTML='<span style=\'color:white;font-size:14px\'>FB</span>';">
                         </a>
                         <a href="https://www.instagram.com/justseebeekinesiology/" target="_blank" style="display: inline-block; text-decoration: none;">
-                            <img src="IGLogo.png" alt="Instagram" style="width: 40px; height: 40px; border-radius: 50%; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onerror="this.outerHTML='<span style=\'color: white; font-size: 14px;\'>IG</span>';">
+                            <img src="IGLogo.png" alt="Instagram" style="width: 40px; height: 40px; border-radius: 50%;" onerror="this.outerHTML='<span style=\'color:white;font-size:14px\'>IG</span>';">
                         </a>
                     </div>
                 </div>
@@ -515,41 +293,15 @@
     </footer>
 
     <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Mobile menu toggle
     const mobileMenu = document.querySelector('.mobile-menu');
     const navLinks = document.querySelector('.nav-links');
-    
     if (mobileMenu && navLinks) {
         mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
         });
     }
-
-    // Force footer social icons to be visible
-    window.addEventListener('DOMContentLoaded', function() {
-        setTimeout(() => {
-            document.querySelectorAll('.footer-social-link img').forEach(img => {
-                img.style.opacity = '1';
-                img.style.visibility = 'visible';
-                img.style.display = 'block';
-            });
-        }, 100);
-    });
     </script>
 </body>
 </html>
