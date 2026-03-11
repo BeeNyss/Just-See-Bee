@@ -616,9 +616,18 @@ footer {
    ══════════════════════════════════════ */
 @media (max-width: 768px) {
 
+  html, body {
+    height: auto;
+    min-height: unset;
+}
+    body {
+    min-height: unset;
+    height: auto;
+}
     header {
-        position: relative;
-    }
+    position: relative;
+    overflow: hidden;
+}
 
     .logo img {
         height: 70px;
